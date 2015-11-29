@@ -1,18 +1,15 @@
 function arrayMaker(max) {
+  var tableau = [];
   if(isNaN(max)) {
     return null;
   } else if(max === 0) {
     return [];
-  }
-  function arrayMaker(max) {
-    var i;
-    while (i < max) {
-        var tableau = [i];
-        return tableau;
-        i+=1;
+  }else {
+    for (var i = 0; i < max; i++) {
+      tableau.push(i);
     }
+    return tableau;
+  }
 }
 
-console.log(arrayMaker(10));
-
-}
+alert(arrayMaker(10));
